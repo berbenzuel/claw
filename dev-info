@@ -1,10 +1,10 @@
 This file contains many technologies we should get comportable with using to make our lives easier creating ClawRs.
 
-LLVM:
-
-  pretty much just a tool for easier creation of a programming language and LSP for our framework
-  fireship video: https://www.youtube.com/watch?v=BT2Cv-Tjq7Q
-
 Wasm in Rust
 
   https://www.youtube.com/watch?v=yNPTpk7qOEc
+  wasm-pack
+
+State of application:
+
+  Hot reload using Vite works as intended, so now we need to think of a nice way to return a reactive html from rust.
