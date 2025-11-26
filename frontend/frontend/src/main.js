@@ -7,10 +7,3 @@ async function run() {
 }
 
 run();
-
-if (import.meta.hot) {
-  import.meta.hot.accept("../../pkg/my_crate.js", async (updated) => {
-    console.log("🔁 Reloading WASM module...");
-    await updated.default();
-  });
-}

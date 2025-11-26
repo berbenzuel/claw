@@ -1,7 +1,13 @@
+use shared::prelude::*;
 use wasm_bindgen::prelude::*;
-use shared::*;
 
 #[wasm_bindgen]
 pub fn get_app() -> String {
-    P::new("Hello from Rust p element").get_html()
+    view(
+        div([
+            p("Hello from rust wasm"),
+            p("Hi from rust wasm again"),
+            p("Hi from rust wasm for the third time!")
+        ])
+    )
 }
