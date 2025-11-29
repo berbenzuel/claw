@@ -1,5 +1,5 @@
 [workspace]
 members = [
-  "shared",
+  "claw",
   "frontend/src-rust"
 ]

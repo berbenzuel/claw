@@ -3,6 +3,6 @@ pub trait HtmlElement {
     fn get_html(&self) -> String;
 }
 
-pub fn view<T: HtmlElement + 'static>(element: T) -> String {
+pub fn view<T: HtmlElement>(element: &T) -> String {
     element.get_html()
 }
