@@ -1,28 +1,11 @@
-use claw::{core::ClawApp, prelude::*};
+use claw::{core::ClawApp};
 use wasm_bindgen::prelude::*;
+pub mod app;
 
 #[wasm_bindgen]
 pub fn init_app() {
     let app = ClawApp::new();
+    let page = app::page::Page;
 
-    struct TestCmp;
-    impl Component for TestCmp {
-        fn name(&self) -> String {
-            "test".to_string()
-        }
-
-        fn template(&self) -> impl HtmlElement {
-            div([
-                p("Rust test component")
-            ])
-        }
-
-        fn render(&self) {
-
-        }
-    }
-
-    let test = TestCmp {};
-
-    app.attach(&test).expect("Cannot attach Wasm to Vite client");
+    app.attach(&page).expect("Cannot attach Wasm to Vite client");
 }
